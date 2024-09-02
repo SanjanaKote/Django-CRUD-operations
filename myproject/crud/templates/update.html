@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Update member </h1>
+    <form action="{% url 'display_list' member.id %}" method="post">
+        {% csrf_token %}
+        FirstName:<br>
+        <input name="first" value="{{ member.firstname }}"><br><br>
+        LastName:<br>
+        <input name="last" value="{{ member.lasttname }}"><br><br>
+        DOB:<br>
+        <input type="date" name="dob" value="{{ member.dob|date:'Y-m-d' }}"><br><br>
+        <button type="submit">Update</button>
+    </form>
+    
+    
+</body>
+</html> 

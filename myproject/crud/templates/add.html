@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add Member</h1>
+    <form action="add_display" method="post">
+        {% csrf_token %}
+        Firstname:<br>
+        <input type="text" id="first" name="first"><br><br>
+        Lastname:<br>
+        <input type="text" id="last" name="last"><br><br>
+        DOB:<br>
+        <input type="date" id="dob" name="dob"><br><br>
+        <input type="Submit" value="submit">
+    </form>
+</body>
+</html>
